@@ -13,8 +13,13 @@ public class test {
         List<String> ipList = Arrays.asList("123123,123,123,123,123,123,123".split(","));
         List<Integer> portSet =ipList.stream().map(i->i.length()).filter(i->i==6).collect(Collectors.toList());
         for (int i: portSet) {
-            System.out.print(i);
+            System.out.println(i);
         }
+
+//        String a="abcd";
+//        System.out.print(a.substring(0,4));
+
+        System.out.print(Integer.toBinaryString(111));
 
     }
 }
