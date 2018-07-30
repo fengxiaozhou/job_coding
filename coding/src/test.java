@@ -7,17 +7,27 @@ import java.util.stream.Collectors;
  */
 public class test {
     public static void main(String[] args) {
-//        List<String> ipList = Arrays.asList("123123,123,123,123,123,123,123".split(","));
-//        List<Integer> portSet =ipList.stream().map(i->i.length()).filter(i->i==6).collect(Collectors.toList());
-//        for (int i: portSet) {
-//            System.out.println(i);
-//        }
+        ArrayList<Integer> a=new ArrayList<Integer>();
+        a.add(1);
+        a.add(3);
+        a.add(5);
+        List<ArrayList<Integer>> alist=new ArrayList<ArrayList<Integer>>();
+        allList(alist,a,0);
 
-//        String a="abcd";
-//        System.out.print(a.substring(0,4));
-
-//        System.out.print(Integer.toBinaryString(111));
         Scanner sc = new Scanner(System.in);
         System.out.print(sc.nextLine());
+    }
+
+    public static void allList(List<ArrayList<Integer>> alist,ArrayList<Integer> List ,int n){
+        if(n==List.size()){
+            alist.add(new ArrayList<>(List));
+        }else{
+            for(int i=n;i<List.size();i++){
+                Collections.swap(List,i,n);
+                allList(alist,List,n+1);
+                Collections.swap(List,i,n);
+            }
+        }
+
     }
 }

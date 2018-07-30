@@ -52,11 +52,4 @@ public class addTwoNumbersWithLink {
         return temp.next;
     }
 }
-class ListNode {
-      int val;
-      ListNode next;
-      ListNode(int x) {
-          val = x;
-          next = null;
-      }
-}
+
