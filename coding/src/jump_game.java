@@ -1,3 +1,5 @@
+import java.sql.Array;
+
 public class jump_game {
     public boolean canJump(int[] A) {
         if(A.length==0||A.length==1) return true;
