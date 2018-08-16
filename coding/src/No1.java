@@ -1,6 +1,4 @@
-import java.util.LinkedHashMap;
 import java.util.LinkedList;
-import java.util.Map;
 import java.util.Scanner;
 
 public class No1 {
@@ -15,6 +13,9 @@ public class No1 {
         for(int i=0;i<n;i++) {//注意while处理多个case
             arr[i]=in.nextInt();
         }
+        if(k==0){
+            return;
+        }
         while(t==false&&k>0){
             number++;
             find(arr);
@@ -22,7 +23,7 @@ public class No1 {
         }
         int max=Max(arr);
         int min=Min(arr);
-        System.out.println(max-min+""+number);
+        System.out.println(max-min+" "+number);
         for (String s:map) {
             System.out.println(s);
         }
@@ -33,7 +34,7 @@ public class No1 {
         int max=Max(arr);
         int min=Min(arr);
         if(arr[max]!=arr[min]) {
-            map.add(String.valueOf(max+1)+(min+1));
+            map.add(String.valueOf(max+1)+" "+(min+1));
             arr[max]--;
             arr[min]++;
         }else{
