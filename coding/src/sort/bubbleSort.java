@@ -1,5 +1,11 @@
 package sort;
 
+import javax.swing.text.html.HTMLDocument;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.concurrent.ConcurrentHashMap;
+
 /**
  * @author Fz
  * @date 2018/8/25 20:42
@@ -27,5 +33,7 @@ public class bubbleSort {
         for (int i:arr) {
             System.out.print(i+" ");
         }
+        ArrayList a=new ArrayList();
+        Collections.sort(a);
     }
 }

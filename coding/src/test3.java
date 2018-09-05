@@ -1,7 +1,9 @@
+import java.util.Random;
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.FutureTask;
+import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * @author Fz
@@ -14,22 +16,13 @@ public class test3 extends path_sum {
         }
     }
     public static void main(String[] args) throws ExecutionException, InterruptedException {
-        MyCallable mc = new MyCallable();
-        FutureTask<Integer> ft = new FutureTask<>(mc);
-        Thread thread = new Thread(ft);
-        thread.start();
-        System.out.println(ft.get());
+//        MyCallable mc = new MyCallable();
+//        FutureTask<Integer> ft = new FutureTask<>(mc);
+//        Thread thread = new Thread(ft);
+//        thread.start();
+//        System.out.println(ft.get());
+        Random r=new Random();
+        System.out.println(r.nextInt(123));
     }
-
-}
-interface a extends b,c{
-    void s();
-}
-
-interface b{
-
-}
-
-interface c{
 
 }
