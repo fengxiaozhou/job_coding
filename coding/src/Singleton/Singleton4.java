@@ -6,5 +6,5 @@ package Singleton;
  */
 public enum  Singleton4 {
     INSTANCE;
-    public void doSomeThing(){}
+    private Singleton4() {}
 }

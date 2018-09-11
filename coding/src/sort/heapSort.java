@@ -33,7 +33,7 @@ public class heapSort {
         //判断左孩子是否小宇size，小于就说明数组没有越界，如果左孩子越界有孩子肯定越界
         while (left<size){
             //设置一个最大的变量，他的初始值是左孩子和右孩子中的最大值
-            int largest = left+1<size&&arr[left+1]>arr[left] ? left+1 : left;
+            int largest =left+1<size&&arr[left+1]>arr[left] ? left+1 : left;
             //判断当前结点和孩子节点最大值的大小，更新largest的值
             largest = arr[largest] > arr[index] ? largest:index;
             //如果largest还是index，说明当前结点的值就是此时大根堆的最大值
