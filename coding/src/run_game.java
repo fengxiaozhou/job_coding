@@ -1,6 +1,8 @@
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
 
 /**
  * @author Fz
@@ -10,6 +12,7 @@ public class run_game {
     private final static int count=10;
 
     public static void main(String[] args) throws InterruptedException {
+        Lock l=new ReentrantLock();
         final CountDownLatch begin=new CountDownLatch(1);
         final CountDownLatch end=new CountDownLatch(count);
         final ExecutorService exec= Executors.newFixedThreadPool(10);

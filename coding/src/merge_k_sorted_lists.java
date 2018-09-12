@@ -2,6 +2,7 @@ import java.util.ArrayList;
 import java.util.Stack;
 
 public class merge_k_sorted_lists {
+
     public ListNode mergeKLists(ArrayList<ListNode> lists) {
         if (lists.size()==0) return null;
         if(lists.size()==1) return lists.get(0);
