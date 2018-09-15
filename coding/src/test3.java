@@ -11,13 +11,13 @@ import java.util.concurrent.atomic.AtomicInteger;
  */
 public class test3 extends path_sum {
     public static void main(String[] args) throws InterruptedException {
-        Thread a=new Thread(new Runnable() {
-            @Override
-            public void run() {
-                System.out.println(1);
-            }
-        });
-        a.start();
+            Thread a=new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    System.out.println(1);
+                }
+            });
+            a.start();
         System.out.println(Thread.currentThread());
         a.join();
         a.start();
