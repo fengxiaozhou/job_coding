@@ -10,7 +10,7 @@ public class wordBreakii {
     static ArrayList<String> list=new ArrayList<>();
 
     public static void main(String[] args) {
-        System.out.println(wordBreak("catsanddog",new HashSet<>(Arrays.asList(new String[]{"cat", "cats", "and", "sand", "dog"}))));
+        System.out.println(wordBreak("catsanddog",new HashSet<>(Arrays.asList(new String[]{"cat", "and", "sand", "dog"}))));
     }
     public static ArrayList<String> wordBreak(String s, Set<String> dict) {
         dfs(s,0,"",dict);

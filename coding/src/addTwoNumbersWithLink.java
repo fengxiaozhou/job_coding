@@ -7,7 +7,7 @@ public class addTwoNumbersWithLink {
         ListNode l1=new ListNode(1);
         l1.next=new ListNode(2);
         l1.next.next=new ListNode(5);
-        l1.next.next.next=new ListNode(9);
+        l1.next.next.next=new ListNode(19);
 
         ListNode l2=new ListNode(4);
         l2.next=new ListNode(6);
