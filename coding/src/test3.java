@@ -10,37 +10,22 @@ import java.util.concurrent.locks.ReentrantLock;
  * @date 2018/8/15 14:14
  */
 public class test3 {
-     ThreadLocal<Long> longLocal=new ThreadLocal<>();
-     ThreadLocal<String> stringLocal=new ThreadLocal<>();
-     public void set(){
-         longLocal.set(Thread.currentThread().getId());
-         stringLocal.set(Thread.currentThread().getName());
-     }
-     public long getLong(){
-        return  longLocal.get();
-     }
-    public String getString(){
-        return  stringLocal.get();
-    }
-
     public static void main(String[] args) throws InterruptedException {
-        final test3 test=new test3();
-        test.set();
-        System.out.println(test.getLong());
-        System.out.println(test.getString());
-
-        Thread thread1=new Thread(){
-            public void run(){
-                test.set();
-                System.out.println(test.getLong());
-                System.out.println(test.getString());
-            }
-        };
-        thread1.start();
-        thread1.join();
-
-        System.out.println(test.getLong());
-        System.out.println(test.getString());
+//        HashMap
+//        ArrayList
+//          LinkedList
+        ConcurrentHashMap
+        System.out.println(result());
+    }
+    public static int result(){
+        int i=0;
+        try{
+            i=2;
+            return i;
+        }finally {
+            i=i+1;
+            System.out.println(i);
+        }
     }
 }
 
