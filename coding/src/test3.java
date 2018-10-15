@@ -11,21 +11,11 @@ import java.util.concurrent.locks.ReentrantLock;
  */
 public class test3 {
     public static void main(String[] args) throws InterruptedException {
-//        HashMap
-//        ArrayList
-//          LinkedList
-        ConcurrentHashMap
-        System.out.println(result());
-    }
-    public static int result(){
-        int i=0;
-        try{
-            i=2;
-            return i;
-        }finally {
-            i=i+1;
-            System.out.println(i);
-        }
+        Scanner sc=new Scanner(System.in);
+        double a=sc.nextDouble();
+        double b=sc.nextDouble();
+        double c=sc.nextDouble();
+        System.out.println(Math.pow(a,b)%c);
     }
 }
 
