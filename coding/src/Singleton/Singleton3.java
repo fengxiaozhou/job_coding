@@ -5,7 +5,7 @@ package Singleton;
  * @date 2018/8/17 22:04
  */
 public class Singleton3 {
-    private volatile static Singleton3 instance;
+    private  static volatile Singleton3 instance;
     private Singleton3(){}
     public static Singleton3 getInstance(){
         if(instance==null){

@@ -19,6 +19,6 @@ public class no1 {
         }
         String res=strings[strings.length-1];
         System.out.println("/"+res);
-
+        System.out.println("/"+res);
     }
 }

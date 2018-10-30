@@ -1,62 +1,32 @@
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Scanner;
 
 public class No1 {
-    static LinkedList<String> map=new LinkedList<String>();
-    static boolean t=false;
-    static int number=0;
-    public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        int n = in.nextInt();
-        int k = in.nextInt();
-        int[] arr=new int[n];
-        for(int i=0;i<n;i++) {//注意while处理多个case
-            arr[i]=in.nextInt();
+    public static int find(int[] arr,int target,int low,int high){
+        if(target<arr[low]||target>arr[high]||low>high){
+            return -1;
         }
-        if(k==0){
-            return;
+        int mid=(low+high)>>1;
+        if(arr[mid]>target){
+            return find(arr,target,low,mid-1);
         }
-        while(t==false&&k>0){
-            number++;
-            find(arr);
-            k--;
+        else if(arr[mid]<target){
+            return find(arr,target,mid+1,high);
         }
-        int max=Max(arr);
-        int min=Min(arr);
-        System.out.println(max-min+" "+number);
-        for (String s:map) {
-            System.out.println(s);
-        }
-
-
+        else return arr[mid];
     }
-    public static void find(int[] arr){
-        int max=Max(arr);
-        int min=Min(arr);
-        if(arr[max]!=arr[min]) {
-            map.add(String.valueOf(max+1)+" "+(min+1));
-            arr[max]--;
-            arr[min]++;
-        }else{
-            t=true;
-    }
-    }
-    public static int Max(int[] arr){
-        int res=0;
-        for(int i=1;i<arr.length;i++){
-            if(arr[0]<arr[i]){
-                res=i;
-            }
+    public static int find2(int[] arr,int target,int low,int high){
+        if(target<arr[low]||target>arr[high]||low>high){
+            return -1;
         }
-        return res;
-    }
-    public static int Min(int[] arr){
-        int res=0;
-        for(int i=1;i<arr.length;i++){
-            if(arr[0]>arr[i]){
-                res=i;
-            }
+        int mid;
+        while (low<=high){
+            mid=(low+high)>>1;
+            if(arr[mid]<target) low=mid-1;
+            else if(arr[mid]>target) high=mid+1;
+            else return mid;
         }
-        return res;
+        return -1;
     }
 }

@@ -6,6 +6,12 @@ import java.lang.reflect.Method;
  * @author Fz
  * @date 2018/9/16 23:30
  */
+
+/**
+ * Class z=Class.forname();
+ * Object 0=z.newInstance();
+ * Method
+ */
 class Person {
     private String name;
     private int age;
@@ -55,6 +61,8 @@ public class ReflectDemo {
             }
             Method method = c.getMethod("fun", String.class, int.class);
             method.invoke(o,"tengj", 10);
+            Method method2=c.getMethod("fun");
+            method2.invoke(o);
         } catch (Exception e) {
             e.printStackTrace();
         }
